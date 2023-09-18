@@ -17,3 +17,10 @@ blocks:
             - 'docker push "${DOCKER_USERNAME}/dockerizing-nodejs-addressbook:latest"'
       secrets:
         - name: dockerhub
+  - name: Test
+    task:
+      secrets:
+        - name: dockerhub
+      jobs:
+        - name: Integration Test
+          commands: []
